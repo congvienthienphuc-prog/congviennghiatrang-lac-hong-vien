@@ -48,3 +48,7 @@ Với hosting tĩnh, dùng `dist` làm thư mục xuất bản ở gốc domain.
 - 398 tham chiếu nội bộ hợp lệ, kiểm tra H1 và metadata.
 - Kiểm tra cú pháp JavaScript bằng Node.
 - Kiểm tra giao diện trực tiếp chưa hoàn tất vì môi trường trình duyệt bị timeout.
+
+## Trang chủ cập nhật
+
+Bố cục trang chủ: banner, tổng quan nhanh, giới thiệu, vị trí, 6 nhóm tiện ích/dịch vụ, khuôn viên mộ, hướng dẫn lựa chọn, cẩm nang, FAQ và liên hệ. Chỉnh nội dung trong `scripts/build_homepage.py`, giao diện tại `dist/assets/home.css`. Chạy `python3 scripts/build_homepage.py` để chỉ tạo lại trang chủ, hoặc `python3 build.py` để tạo toàn website. Thông tin vị trí và quy mô được đối chiếu từ trang giới thiệu đơn vị dự án; trang chủ dẫn nguồn tại khối tổng quan.

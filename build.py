@@ -37,3 +37,7 @@ for slug,(title,desc,body) in P.items():
 (D/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>https://congviennghiatrang.com'+url(s)+'</loc></url>' for s in P)+'</urlset>')
 (D/'404.html').write_text('<!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/assets/style.css"><main class="wrap section"><p class="eyebrow">404</p><h1>Trang bạn tìm chưa có tại đây.</h1><p>Hãy quay lại trang chủ để tiếp tục khám phá.</p><a class="button" href="/">Về trang chủ ↗</a></main></html>')
 print(f'Generated {len(P)} content pages + 404')
+
+# Keep the dedicated homepage layout when regenerating the website.
+import runpy
+runpy.run_path(str(R/'scripts/build_homepage.py'), run_name='__main__')
